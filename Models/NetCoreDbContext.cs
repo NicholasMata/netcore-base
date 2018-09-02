@@ -37,6 +37,9 @@ namespace NetCoreBase.Models
             builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogin");
             builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaim");
             builder.Entity<IdentityUserToken<string>>().ToTable("UserToken");
+
+            // Run Seed defined in NetCoreDBSeed.cs as a ModelBuilder extension.
+            builder.Seed();
         }
     }
 }
